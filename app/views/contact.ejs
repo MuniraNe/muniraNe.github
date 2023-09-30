@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css"/>
+    <style>
+        /* Add background color to the navbar */
+        .navbar {
+            background-color: rgb(253, 255, 255);
+        }
+
+        /* Space out the navbar items and remove the bullet points */
+        ul.navbar-nav {
+            list-style: none;
+            display: flex;
+            gap: 20px; /* Adjust the spacing between navbar items */
+            justify-content: flex-end; /* Align items to the right */
+            font-size: 20px;
+        }
+
+        
+
+        a:link {
+            text-decoration: none;
+        }
+        a:visited {
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: none;
+        }
+        a:active {
+            text-decoration: none;
+        }
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        main {
+            flex: 1;
+        }
+        footer {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 10px;
+        }
+        footer .navbar-text {
+            margin-bottom: 0;
+        }
+        .padding{
+            padding-left: 25%;
+            padding-right: 25%;
+            
+        }
+        
+    </style>   
+</head>
+<body class="padding" >
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+        <img src="/img/logo6.png" alt="" style="width: 100px; height: 50px">
+        
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto"> <!-- Changed class to ml-auto for right alignment -->
+                <% if (title=="Home"){%>
+                <li class="nav-item active">
+                <%}else{%>
+                <li class="nav-item">
+                <%}%>
+                <a class="nav-link" href="/"><i class="fas fa-lg fa-laptop-house"></i>Home</a>
+                </li>
+                <% if (title=="About"){%>
+                <li class="nav-item active">
+                <%}else{%>
+                <li class="nav-item">
+                <%}%>
+                <a class="nav-link" href="/about"><i class="fa-solid fa-address-card"></i>About</a>
+                </li>
+                
+                <% if (title=="Product"){%>
+                <li class="nav-item active">
+                <%}else{%>
+                <li class="nav-item">
+                <%}%>
+                <a class="nav-link" href="/products"><i class="fa-brands fa-product-hunt"></i>Product</a>
+                </li>
+                <% if (title=="Services"){%>
+                <li class="nav-item active">
+                <%}else{%>
+                <li class="nav-item">
+                <%}%>
+                <a class="nav-link" href="/services"><i class="fa-brands fa-servicestack"></i>Services</a>
+                </li>
+                <% if (title=="Contact"){%>
+                    <li class="nav-item active">
+                    <%}else{%>
+                    <li class="nav-item">
+                    <%}%>
+                    <a class="nav-link" href="/contact"><i class="fa-solid fa-address-book"></i>Contact</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<main class="container" id="margin">
+  <div class="jumbotron">
+    <h1 class="display-4">Welcome to <%= title %> page</h1>
+
+    <h1>Contact Me</h1>
+    
+    <form id="contactForm" onsubmit="return submitForm()" >
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required><br><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required><br><br>
+
+        <label for="contactNumber">Contact Number:</label>
+        <input type="tel" id="contactNumber" name="contactNumber" required><br><br>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function submitForm() {
+            // Capture user input
+            var firstName = document.getElementById('firstName').value;
+            var lastName = document.getElementById('lastName').value;
+            var contactNumber = document.getElementById('contactNumber').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+
+            // You can perform additional validation or send this data to a server here
+
+            // Redirect to Home Page (Change 'home.html' to your actual Home Page URL)
+            window.location.href = '/index';
+            // Prevent the default form submission
+            return false;
+        }
+    </script>
+    </div>
+    </main>
+        <nav class="navbar fixed-bottom navbar-dark bg-dark">
+       
+        <h4 class="display-6 navbar-text">Copyright -Munira Negash Hussien &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Student Number:301116861 
+        </h4>
+        </div>
+        </nav>
+        </footer>
+        <script src="/jquery/dist/jquery.min.js"></script>
+        <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+        </body>
+        </html>

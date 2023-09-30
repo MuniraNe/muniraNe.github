@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css"/>
+    <style>
+        /* Add background color to the navbar */
+        .navbar {
+            background-color: rgb(253, 255, 255);
+        }
+
+        /* Space out the navbar items and remove the bullet points */
+        ul.navbar-nav {
+            list-style: none;
+            display: flex;
+            gap: 20px; /* Adjust the spacing between navbar items */
+            justify-content: flex-end; /* Align items to the right */
+            font-size: 20px;
+        }
+
+        
+
+        a:link {
+            text-decoration: none;
+        }
+        a:visited {
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: none;
+        }
+        a:active {
+            text-decoration: none;
+        }
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        main {
+            flex: 1;
+        }
+        footer {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 10px;
+        }
+        footer .navbar-text {
+            margin-bottom: 0;
+        }
+        .padding{
+            padding-left: 25%;
+            padding-right: 25%;
+            
+        }
+        
+    </style>
+</head>
+<body class="padding">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+        <img src="/img/logo6.png" alt="logo" style="width: 150px; height: 100px">
+       
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto"> <!-- Changed class to ml-auto for right alignment -->
+                <% if (title=="Home"){%>
+                <li class="nav-item active">
+                <%}else{%>
+                <li class="nav-item">
+                <%}%>
+                <a class="nav-link" href="/"><i class="fas fa-lg fa-laptop-house"></i>Home</a>
+                </li>
+                <% if (title=="About"){%>
+                <li class="nav-item active">
+                <%}else{%>
+                <li class="nav-item">
+                <%}%>
+                <a class="nav-link" href="/about"><i class="fa-solid fa-address-card"></i>About</a>
+                </li>
+                
+                <% if (title=="Product"){%>
+                <li class="nav-item active">
+                <%}else{%>
+                <li class="nav-item">
+                <%}%>
+                <a class="nav-link" href="/products"><i class="fa-brands fa-product-hunt"></i>Product</a>
+                </li>
+                <% if (title=="Services"){%>
+                <li class="nav-item active">
+                <%}else{%>
+                <li class="nav-item">
+                <%}%>
+                <a class="nav-link" href="/services"><i class="fa-brands fa-servicestack"></i>Services</a>
+                </li>
+                <% if (title=="Contact"){%>
+                    <li class="nav-item active">
+                    <%}else{%>
+                    <li class="nav-item">
+                    <%}%>
+                    <a class="nav-link" href="/contact"><i class="fa-solid fa-address-book"></i>Contact</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<main class="container" >
+  <div class="jumbotron">
+    <h1 class="display-4">Welcome to <%= title %> page</h1>
+
+
+    <img src="/img/webD1.jpg" alt="" style="width: 290px; height: 180px; float: right;">
+<br>
+  <p><ol><li>Project 1: Website Development:</li></ol>
+    <p>     As a Web design new learner , I'm currently learning how to do web design. 
+        I have worked on Lisa Bailey's property webpage project.
+      </p>
+
+      <br>
+      <br>
+      <br>
+      
+      <br>
+      <img src="/img/sql.png" alt="" style="width: 205px; height: 200px; float: right;">
+      <br>
+  <p><ol><li>Project 2: Design and develop an Oracle database.</li></ol>
+    <p> In my last tearm project, I worked with a team to create a hospital database.</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <img src="/img/js1.png" alt="" style="width: 190px; height: 180px; float: right;">
+
+  <p><ol><li>Project 3:  Design and develop javascript</li></ol>
+    <p>In my last tearm project, I worked with a team to devolop game using java script<br>
+        I'm still upgrading my skills and learning more about java script. </p>
+
+    
+  </p>
+    </div>
+    </main>
+        <nav class="navbar fixed-bottom navbar-dark bg-dark">
+        
+        <h4 class="display-6 navbar-text">Copyright -Munira Negash Hussien &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Student Number:301116861 
+        </h4>
+        </div>
+        </nav>
+        </footer>
+        <script src="/jquery/dist/jquery.min.js"></script>
+        <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+        </body>
+        </html>
